@@ -5,15 +5,8 @@ $(function () {
         slidesToScroll: 4,
         dots: true,
         arrows: false,
-       focusOnSelect: true,
-        cssEase: 'linear'
+        focusOnSelect: true,
     });
-
-
-
-
-
-
 
 
     var mixer = mixitup('.products__inner-box');
