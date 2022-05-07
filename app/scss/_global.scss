@@ -11,6 +11,7 @@ html {
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -32,6 +33,7 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: $solor-text;
+   
 }
 
 * {
@@ -147,5 +149,18 @@ body {
                 color: #fff;
             }
         }
+    }
+}
+
+.circle-right{
+    position: relative;
+    padding-left: 20px;
+    &::before{
+        content: "\ea42";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0px;
+        color: $green;
+        font-size: 14px;
     }
 }
