@@ -2,7 +2,6 @@
 @import 'global';
 @import 'fonts';
 
-
 .header {
     background-color: #fff;
 }
@@ -836,7 +835,7 @@
 }
 
 // fin-advantages
-// start-author
+// start-.author__awards-list .icon-shield
 .author {
     background-position: center;
     background-repeat: no-repeat;
@@ -1804,10 +1803,6 @@ button.icon-star-empty {
         color: #fff;
         font-size: 18px;
 
-        &+li {
-            margin-left: 3px;
-        }
-
         &::before {
             position: absolute;
             right: 0;
@@ -2185,14 +2180,18 @@ button.icon-star-empty {
 
 .page-box__content {
     padding: 30px 35px 80px;
-    button{
-        background: none;
+
+    button {
         border: none;
-        background-color: $green;
         color: #fff;
+        font-size: 16px;
+        background-color: #8bc34a;
+        text-align: center;
         @include f500;
         cursor: pointer;
-        padding: 14px 29px;
+        padding: 20px;
+        width: 190px;
+
     }
 }
 
@@ -2227,6 +2226,226 @@ button.icon-star-empty {
 }
 
 // fin-settings
+// start-profile
 
+.profile__inner {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.profile__aside {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+
+    & .footer__cocial-link {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    & .aside__item {
+        margin-bottom: 0;
+    }
+}
+
+.profile__content {
+    width: 100%;
+}
+
+.profile-status {
+    font-size: 13px;
+    color: rgba(182, 178, 178, 0.9);
+    border: 1px solid #f4f6f5;
+    padding: 6px;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background-color: $green;
+        border-radius: 50%;
+        left: 6px;
+        top: 13px;
+    }
+}
+
+.profile-on {
+    &::before {
+        background-color: $green;
+    }
+}
+
+.profile-off {
+    &::before {
+        background-color: $red;
+    }
+}
+
+.profile__aside-btn {
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.profile__aside-message {
+    background-color: $solor-text;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+    margin-bottom: 17px;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    @include f700;
+    display: block;
+    padding: 18px 10px;
+    width: 100%;
+
+    &::before {
+        content: "\e903";
+        position: absolute;
+        font-family: 'icomoon';
+        left: 50px;
+        top: 17px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.profile__aside-following {
+    background-color: $green;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    @include f700;
+    display: block;
+    padding: 18px 10px;
+    margin-bottom: 17px;
+    width: 100%;
+}
+
+.profile__items {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dedede;
+}
+
+.profile__item {
+    text-align: center;
+    padding: 20px 5px 17px;
+    width: 25%;
+    font-size: 14px;
+    color: $bg;
+    @include f500;
+
+    &+.profile__item {
+        border-left: 1px solid #dedede;
+
+    }
+
+    .profile__item-content {
+        color: #707070;
+
+        &.profile__item-sales {
+            color: $bg;
+        }
+    }
+}
+
+.profile__banner {
+    border-left: 1px solid #dedede;
+    background-color: #fff;
+    padding: 19px 19px;
+    margin-bottom: 35px;
+}
+
+.profile__banner-img {
+    height: 330px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-settings {
+    .product-one__tabs.settings__tabs .tabs span {
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: 700;
+        position: relative;
+
+        &::before {
+            font-family: 'icomoon';
+            position: absolute;
+            top: 14px;
+            left: 27px;
+        }
+
+    }
+
+    .icon-mail-envelope-closed {
+        &::before {
+            font-size: 18px;
+        }
+    }
+}
+
+.personal-box {
+    background-color: #fff;
+    padding: 35px 40px 25px;
+}
+
+.personal-box__title {
+    font-size: 20px;
+    @include f700;
+    margin-bottom: 20px;
+    color: $bg;
+}
+
+.personal-box__text {
+    margin-bottom: 20px;
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #707070;
+    }
+}
+
+.personal-box__item-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: $bg;
+    line-height: 24px;
+}
+
+.personal-box__item-name {
+    @include f500;
+    font-style: italic;
+}
+
+.personal-box__item-number {
+    @include f700;
+}
+
+.personal-box__item-line {
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 24px;
+
+    span {
+        display: block;
+        height: 15px;
+        border-radius: 3px;
+        background-image: url(../images/progress.jpg);
+        background-repeat: repeat;
+    }
+}
+
+// fin--profile
 
 @import 'media';
