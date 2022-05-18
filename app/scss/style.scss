@@ -596,6 +596,13 @@
 .products {
     padding: 110px 0;
     background-color: $grey;
+
+}
+
+.product__wrapper,
+.product-slider__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .products__inner-btn {
@@ -624,13 +631,19 @@
 
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
+}
 
+.products .products__item {
+       
+        flex-basis: calc(25% - 30px);
+        margin-left: 30px;
 }
 
 .products__item {
-    max-width: 442px;
+    max-width: 442px; 
     width: 100%;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
@@ -735,7 +748,7 @@
 }
 
 // fin-products
-// start-product-slider
+// start-product
 .product-slider {
     padding: 110px 0 120px;
 
@@ -1346,9 +1359,10 @@ button.icon-star-empty {
     width: 100%;
 
     .products__item {
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
         background-color: #fff;
         transition: all .5s;
+        margin-left: 30px;
     }
 
     .products__item-img {
@@ -1433,13 +1447,15 @@ button.icon-star-empty {
 
 .product-page__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: -30px;
 
     .products__item {
         &.list {
             max-width: 100%;
+            flex-basis: 100%;
             box-shadow: 0px 16px 20px 0px rgba(216, 216, 216, 0.75);
 
             .products__item-img {
@@ -1503,7 +1519,7 @@ button.icon-star-empty {
 .product-one__img-inner {
     background-color: #fff;
     border: 1px solid #dcdcdc;
-    padding: 16px 0;
+    padding: 16px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1729,6 +1745,43 @@ button.icon-star-empty {
     display: flex;
     justify-content: space-between;
     padding: 30px 0px;
+
+    .jq-selectbox {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .jq-selectbox__select {
+        border: 1px solid #dedede;
+        border-radius: 0;
+        border-bottom-color: #dedede;
+        background: #f1f4f5;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 18px;
+        color: #707070;
+        text-shadow: none;
+        box-shadow: none;
+        @include f500;
+
+    }
+
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        font-size: 15px;
+        line-height: 40px;
+        top: -4px;
+        right: 15px;
+
+        &::before {
+            font-family: 'icomoon';
+            content: "\e906";
+        }
+    }
 }
 
 .price__product {
@@ -2121,7 +2174,8 @@ button.icon-star-empty {
     display: flex;
 
     .tabs {
-        min-width: 270px;
+        max-width: 270px;
+        width: 100%;
         margin-right: 30px;
         border: 1px solid #dedede;
         border-bottom: none;
@@ -2193,6 +2247,7 @@ button.icon-star-empty {
         margin-left: 258px;
 
     }
+
 }
 
 .settings__line {
@@ -2223,7 +2278,46 @@ button.icon-star-empty {
         padding: 0 15px;
         color: #000;
     }
+
+    .jq-selectbox {
+        width: 100%;
+        max-width: 540px;
+        box-shadow: none;
+    }
+
+    .jq-selectbox__select {
+        border: 1px solid #dedede;
+        border-radius: 0;
+        border-bottom-color: #dedede;
+        background: #f1f4f5;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 18px;
+        color: #707070;
+        text-shadow: none;
+        box-shadow: none;
+        @include f500;
+
+    }
+
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        font-size: 15px;
+        line-height: 40px;
+        top: -4px;
+        right: 25px;
+
+        &::before {
+            font-family: 'icomoon';
+            content: "\e906";
+        }
+    }
 }
+
 
 // fin-settings
 // start-profile
@@ -2747,7 +2841,8 @@ button.icon-star-empty {
     @include f500;
     font-size: 13px;
     color: #444;
-    &:nth-child(odd){
+
+    &:nth-child(odd) {
         background-color: #f1f4f5;
     }
 }
@@ -2768,6 +2863,7 @@ button.icon-star-empty {
 
 .withdrawals__content-status {
     width: 88px;
+
     &.withdrawals__content-paid {
         color: $green;
     }
