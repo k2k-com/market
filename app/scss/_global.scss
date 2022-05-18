@@ -1,0 +1,172 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $solor-text;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $solor-text;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+}
+
+
+@media (max-width: 720px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+
+}
+.page-content{
+    background-color: $grey;
+}
+.title {
+    color: $bg;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+    @include f700;
+}
+
+.breadcrumbs{
+   &__inner{
+       overflow: hidden;
+       width: 1200px;
+       padding: 45px 0 40px;
+   } 
+   &__list{
+       li{
+           display: inline-block;
+           position: relative;
+           &+li{
+               padding-left: 25px;
+               &::before{
+                content: '-';
+                position: absolute;
+                color: $green;
+                left: 8px;
+            }
+        }
+        &:last-child{
+            a,
+            span{
+                color: $bg;
+            }
+        }
+    }
+       a{
+           color: rgb(148, 142, 142);
+       }
+   }
+}
+
+.pagination {
+    text-align: center;
+
+    .pagination__list {
+        li {
+            display: inline-block;
+
+            &+li {
+                margin-left: 6px;
+            }
+        }
+
+        a,
+        span {
+            box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+            width: 43px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-size: 16px;
+            color: $bg;
+            @include f500;
+
+            &.active {
+                background-color: $red;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.circle-right{
+    position: relative;
+    padding-left: 20px;
+    &::before{
+        content: "\ea42";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0px;
+        color: $green;
+        font-size: 14px;
+    }
+}
+
+#modal{
+    display: none;
+}
+
